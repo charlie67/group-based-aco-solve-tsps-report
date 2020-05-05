@@ -1,100 +1,71 @@
-\chapter{Code Examples}
+\chapter{List of Requirements}\label{appendix_requirements}
 
-For some projects, it might be relevant to include some code extracts in an appendix. You are not expected to put all of your code here - the correct place for all of your code is in the technical submission that is made in addition to the Project Report. However, if there are some notable aspects of the code that you discuss, including that in an appendix might be useful to make it easier for your readers to access. 
+These are the requirements that my project must fulfill in order for me to carry out my experiments as required.
 
-As a general guide, if you are discussing short extracts of code then you are advised to include such code in the body of the report. If there is a longer extract that is relevant, then you might include it as shown in the following section. 
-
-Only include code in the appendix if that code is discussed and referred to in the body of the report. 
-
-\section{Random Number Generator}
-
-The Bayes Durham Shuffle ensures that the psuedo random numbers used in the simulation are further shuffled, ensuring minimal correlation between subsequent random outputs \cite{NumericalRecipes}.
-
-\begin{verbatim}
- #define IM1 2147483563
- #define IM2 2147483399
- #define AM (1.0/IM1)
- #define IMM1 (IM1-1)
- #define IA1 40014
- #define IA2 40692 
- #define IQ1 53668
- #define IQ2 52774
- #define IR1 12211
- #define IR2 3791
- #define NTAB 32
- #define NDIV (1+IMM1/NTAB)
- #define EPS 1.2e-7
- #define RNMX (1.0 - EPS)
- 
- double ran2(long *idum)
- {
-   /*---------------------------------------------------*/
-   /* Minimum Standard Random Number Generator          */
-   /* Taken from Numerical recipies in C                */
-   /* Based on Park and Miller with Bays Durham Shuffle */
-   /* Coupled Schrage methods for extra periodicity     */
-   /* Always call with negative number to initialise    */
-   /*---------------------------------------------------*/	
- 
-   int j;
-   long k;
-   static long idum2=123456789;
-   static long iy=0;
-   static long iv[NTAB];
-   double temp;
- 
-   if (*idum <=0)
-   {
-     if (-(*idum) < 1)
-     {
-       *idum = 1;
-     }else
-     {
-       *idum = -(*idum);
-     }
-     idum2=(*idum);
-     for (j=NTAB+7;j>=0;j--)
-     {
-       k = (*idum)/IQ1;
-       *idum = IA1 *(*idum-k*IQ1) - IR1*k;
-       if (*idum < 0)
-       {
-         *idum += IM1;
-       }
-       if (j < NTAB)
-       {
-         iv[j] = *idum;
-       }
-     }
-     iy = iv[0];	
-   }
-   k = (*idum)/IQ1;
-   *idum = IA1*(*idum-k*IQ1) - IR1*k;
-   if (*idum < 0)
-   {
-     *idum += IM1;
-   }
-   k = (idum2)/IQ2;
-   idum2 = IA2*(idum2-k*IQ2) - IR2*k;
-   if (idum2 < 0)
-   {
-     idum2 += IM2;
-   }
-   j = iy/NDIV;
-   iy=iv[j] - idum2;
-   iv[j] = *idum;
-   if (iy < 1)
-   {
-     iy += IMM1;
-   }
-   if ((temp=AM*iy) > RNMX)
-   {
-     return RNMX;
-   }else
-   {
-     return temp;	
-   }
- }
- 
-\end{verbatim}
-
+\begin{itemize}
+    \item Load in TSP files.
+        \begin{itemize}
+            \item Needs to be able to load in common TSPLIB files.
+            \item Have the data available as an Array.
+            \item Have the data available as a graph.
+            \item Plot a graph showing all the nodes.
+        \end{itemize}
+    \item Perform clustering.
+        \begin{itemize}
+            \item Implement the Birch clustering algorithm.
+            \item Implement the K-Means clustering algorithm.
+            \item Implement the DBSCAN clustering algorithm.
+            \item Implement the Affinity Propagation clustering algorithm.
+            \item Implement the OPTICS clustering algorithm.
+            \item Automate a version of the DBSCAN algorithm that finds the eps value itself.
+            \item All the clustering algorithms should output the clusters in a common format and data structure.
+            \item Plot a graph showing all the clusters.
+            \item Attempt to implement a new clustering algorithm that can better deal with TSP data.
+            \begin{itemize}
+                \item This does not necessarily have to be done it would just be interesting to see if this is possible although given the time available it may not be possible.
+            \end{itemize}
+        \end{itemize}
+    \item Carry out ACO.
+        \begin{itemize}
+            \item Find an ACO library or implement my own.
+            \item Plot a graph of the ACO tour.
+            \item Visualise the incremental improvements that ACO makes.
+                \begin{itemize}
+                    \item It would be nice to have a GIF or a video that shows all the iterations that ACO went through to reach the final ACO tour.
+                \end{itemize}
+        \end{itemize}
+    \item 2-opt.
+        \begin{itemize}
+            \item Implement 2-opt.
+            \item Visualise the improvement that 2-opt makes.
+                \begin{itemize}
+                    \item It would be nice to see the incremental improvements that 2-opt makes when it finds a node to swap and reach a lower tour length. This could be as a GIF or a video, this can reuse the code that was written for the 'Visualise the incremental improvements that ACO makes' above.
+                \end{itemize}
+        \end{itemize}
+    \item Have a way to go from the tour of the global tour of the clusters to a tour through each cluster.
+        \begin{itemize}
+            \item Find the two closest nodes between each cluster of the tour.
+            \item For each cluster record the nodes that are the entry/exit nodes.
+        \end{itemize}
+    \item Tour inside clusters.
+        \begin{itemize}
+            \item Calculate the tour inside each cluster using ACO.
+            \item Calculate the tour inside each cluster using a greedy nearest neighbours. approach
+            \item These tours have to start from the entry node and work towards the exit node.
+            \item Plot a graph of each cluster showing the tour.
+        \end{itemize}
+    \item Validate the tour.
+        \begin{itemize}
+            \item Ensure the tour travels over every node.
+            \item Ensure the tour doesn't visit any node twice.
+        \end{itemize}
+    \item Record the time taken for the program to run.
+        \begin{itemize}
+            \item The time taken for 2-opt should be recorded separately.
+            \item The time taken for graphs to be generated shouldn't be recorded.
+        \end{itemize}
+    \item Calculate the length of the tour.
+        \begin{itemize}
+            \item Calculate this before and after 2-opt is run.
+        \end{itemize}
+\end{itemize}

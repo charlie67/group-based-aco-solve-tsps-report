@@ -1,0 +1,152 @@
+\chapter{Command line arguments}\label{apd:commandline_arguments}
+
+\begin{center}
+\begin{longtable}{|p{4cm}|p{1cm}|p{5cm}|p{1.5cm}|p{1cm}|}
+\caption{Table showing the command line arguments.} \label{tab:commandargs} \\
+
+\hline \multicolumn{1}{|c|}{\textbf{Longhand}} & \multicolumn{1}{c|}{\textbf{Shorthand}} & \multicolumn{1}{c|}{\textbf{Description}} & \multicolumn{1}{c|}{\textbf{Type}} & \multicolumn{1}{c|}{\textbf{Default Value}} \\ \hline 
+\endfirsthead
+
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- continued from previous page}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Longhand}} & \multicolumn{1}{c|}{\textbf{Shorthand}} & \multicolumn{1}{c|}{\textbf{Description}} & \multicolumn{1}{c|}{\textbf{Type}}& \multicolumn{1}{c|}{\textbf{Default Value}} \\ \hline 
+\endhead
+
+\hline \multicolumn{5}{|r|}{{Continued on next page}} \\ \hline
+\endfoot
+
+\hline \hline
+\endlastfoot
+
+--input &
+  -i &
+  Path to the TSPLIB file that should be loaded in &
+  String &
+  None \\ \hline
+--output &
+  -o &
+  Path to the folder where all the output data should be saved &
+  String &
+  None \\ \hline
+--cluster\_type &
+  -c &
+  The clustering type to use, options are K\_MEANS, AFFINITY\_PROPAGATION, BIRCH, DBSCAN, OPTICS &
+  String &
+  None \\ \hline
+--aco\_type &
+  -aco &
+  The ACO algorithm that will be used, options are ACO\_PY or ACO\_MULTITHREADED &
+  String &
+  None \\ \hline
+--cluster\_tour\_type &
+  -ctt &
+  The algorithm to use to find the tours inside the clusters, options are ACO or GREEDY\_NEAREST\_NODE.  If ACO is used then the ACO algorithm specified in -aco is used &
+  String &
+  None \\ \hline
+--numberclusters &
+  -n &
+  The number of clusters that should be created, this is only applied when the clustering algorithm requires the number of clusters to be set &
+  int &
+  20 \\ \hline
+--ap\_convergence\_iter &
+  -apci &
+  The convergence\_iterations for the Affinity Propagation algorithm &
+  int &
+  500 \\ \hline
+--ap\_max\_iter &
+  -apmi &
+  The max\_iterations value for the Affinity Propagation algorithm &
+  int &
+  2000 \\ \hline
+--optics\_min\_samples &
+  -oms &
+  The min\_samples value for the Optics Algorithm &
+  int &
+  5 \\ \hline
+--k\_means\_n\_init &
+  -kmni &
+  The n\_init value for the K\_Means algorithm &
+  int &
+  10 \\ \hline
+--birch\_branching\_factor &
+  -bbf &
+  branching\_factor value for the Birch algorithm &
+  int &
+  50 \\ \hline
+--birch\_threshold &
+  -bt &
+  threshold value for the Birch algorithm &
+  float &
+  0.5 \\ \hline
+--dbscan\_eps &
+  -de &
+  eps value for the DBSCAN algorithm. &
+  float &
+  50 \\ \hline
+--dbscan\_min\_samples &
+  -dms &
+  The min\_samples for the DBSCAN algorithm &
+  int &
+  3 \\ \hline
+--automate\_dbscan\_eps &
+  -ade &
+  Should the DBSCAN algorithm eps value be automated &
+  boolean &
+  True \\ \hline
+--aco\_alpha\_value &
+  -aav &
+  The alpha value for the ACO algorithm &
+  float &
+  1 \\ \hline
+--aco\_beta\_value &
+  -abv &
+  The beta value for the ACO algorithm &
+  float &
+  3 \\ \hline
+--aco\_rho\_value &
+  -arv &
+  The rho value for the ACO algororithm &
+  float &
+  0.03 \\ \hline
+--aco\_q\_value &
+  -aqv &
+  The q value to use for the ACO algorithm &
+  float &
+  1000 \\ \hline
+--aco\_ant\_count &
+  -aac &
+  The number of ants that the ACO algorithm should use &
+  int &
+  50 \\ \hline
+--aco\_iterations &
+  -ai &
+  The number of iterations that the ACO algorithm should run for &
+  int &
+  100 \\ \hline
+ &
+  -run2opt &
+  Whether 2-opt should be ran &
+  boolean &
+  True \\ \hline
+--should\_cluster &
+  -sc &
+  Whether the clustering algorithm should be ran &
+  boolean &
+  True \\ \hline
+ &
+  -dpi &
+  The DPI value that is used for the matplotlib graphs, a higher value makes the graphs larger and more detailed. &
+  int &
+  800 \\ \hline
+--displayplots &
+  -dp &
+  Should the matplotlib plots be opened in a new window when created. Regardless of this setting they are always saved to the output folder &
+  boolean &
+  True \\ \hline
+  --animate\_improvements &
+  -animate &
+  Should an animation be created showing the improvements that ACO and 2-opt make&
+  boolean &
+  True \\ \hline
+\end{longtable}
+\end{center}
