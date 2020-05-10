@@ -6,13 +6,13 @@
 
 \subsubsection{Programming Language}
 
-This project is focused on algorithm design and the performance of this algorithm therefore I wanted a language that was rich in features but capable of high performance. The language needed to support object orientation and the necessary data structures that will aid in its implementation. Python, C++ and Java were all languages that I considered. I also wanted a language that had access to a huge amount of libraries so that I could leverage these resources to more quickly and efficiently create my project, Python fulfills this requirement more than the others. I also wouldn't need to create a web or GUI interface both of these are areas that Java is especially good at with the JavaFX library providing an easy way to implement graphical elements and the Spring package providing an easy way to create API calls for a web interface. Python and Java are slower than C++\cite{java_vs_c++}\cite{c++_vs_python} with Python being significantly slower. C++ is the better choice in terms of efficiency however I'm not aiming to create the fastest TSP solver only compare results so the speed benefit may not be required. C++ is also a less forgiving language where it's easier to make mistakes, if I wanted to use C++ then I would have had to spend a long time learning C++ in finer detail. 
+This project is focused on algorithm design and the performance of this algorithm, therefore I wanted a language that was rich in features but capable of high performance. The language needed to support object orientation and the necessary data structures that will aid in its implementation. Python, C++ and Java were all languages that I considered. I also wanted a language that had access to a huge number of libraries so that I could leverage these resources to more quickly and efficiently create my project, Python fulfills this requirement more than the other two. I also wouldn't need to create a web or GUI interface both of these are areas that Java is especially good at with the JavaFX library providing an easy way to implement graphical elements and the Spring package providing an easy way to create API calls for a web interface. Python and Java are slower than C++\cite{java_vs_c++}\cite{c++_vs_python} with Python being significantly slower. C++ is the better choice in terms of efficiency however I'm not aiming to create the fastest TSP solver only compare results so the speed benefit may not be required. C++ is also a less forgiving language where it's easier to make mistakes, if I wanted to use C++ then I would have had to spend a long time learning C++ in finer detail. 
 
 I also wanted to be able to prototype solutions and due to Python's console support it is the language that would allow me to do this in the quickest and most efficient manner. With this in mind and its huge amount of library support especially in the area of data science/AI Python ended up being the better choice for me. 
 
 \subsubsection{Development Environment}
 
-I used the IntelliJ IDE PyCharm for this project\cite{pycharmide}, this IDE is easy to use but provides complex features that prove very useful, these features include; refactoring tools, Thread concurrency monitoring, automated Unit testing tools and automated Virtualenv creation. I developed on linux 
+I used the IntelliJ IDE PyCharm for this project\cite{pycharmide}, this IDE is easy to use but provides complex features that proved very useful, these features include; refactoring tools, thread concurrency monitoring, automated unit testing tools and automated virtualenv creation. I developed my project on Linux because I find that the features provided by the OS are conducive to productivity.
 
 \subsubsection{Version Control System}
 I used GitHub\cite{github} to host the code for my project and act as a Version Control System (VCS). This allowed for me to keep a backup of all the work I had done so if I needed to refer back to a change I'd made previously it was there and easy to access. GitHub is also really easy to setup and access and it can be connected to other applications for services like Continuous Integration.
@@ -32,7 +32,7 @@ My research required a piece of software be designed and built that could:
     \item Be able to execute the program as a script with CLI arguments
 \end{itemize}
 
-Based off of this I created a list of requirements, these are in Appendix \ref{appendix_requirements}. These were created at the start of the program and because I was using an Agile approach weren't kept fully up to date but represent my thoughts about the software when I started building it which was a couple of weeks into the project.
+Based on this I created a list of requirements, (see Appendix \ref{appendix_requirements}). These were created at the start of the program and because I was using an Agile approach weren't kept fully up to date. but represent my thoughts about the software when I started building it which was a couple of weeks into the project.
 
 My program works by:
 \begin{enumerate}
@@ -46,20 +46,22 @@ My program works by:
     \item Plot all the graphs
 \end{enumerate}
 
-Figure \ref{fig:run_diagram} illustrates how the program works, starting in section A the data is clustered, then in B the ACO tour is ran, in C the entry and exit nodes are found for each cluster and in section D tours are found for each cluster and 2-opt is ran.
+Figure \ref{fig:run_diagram} illustrates how the program works, starting in section A the data is clustered, then in B the ACO tour is run, in C the entry and exit nodes are found for each cluster, and in section D tours are found for each cluster and 2-opt is run.
 
 The output of the program gets saved to a log file for future reference.
 
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/diagram_design_how.png}
-    \caption{This figure shows the steps the program takes: clustering, ACO tour, finding the entry and exit nodes for each cluster and then finally finding tours withing each cluster and bringing it together.}
+    \caption{This figure shows the steps the program takes: clustering, ACO tour, finding the entry and exit nodes for each cluster, and then finally finding tours within each cluster and bringing it together.}
     \label{fig:run_diagram}
 \end{figure}
 
 \subsubsection{Automated DBSCAN eps}
 
-One of the areas that I was keen to improve on was the clustering, whilst I couldn't create a brand new clustering algorithm I did manage to automate a way to improve upon DBSCAN. As I mentioned previously DBSCAN requires a parameter called eps this is what allows for clusters to be found and is the most important factor to choose when using the Algorithm. In \cite{optimal_eps_value_DBSCAN} Rahmah and Sitanggang figure out a way to find this value using a nearest neighbours approach.
+One of the areas that I was keen to improve on was the clustering, whilst I couldn't create a brand new clustering algorithm I did manage to automate a way to improve upon DBSCAN. As I mentioned previously DBSCAN requires a parameter called eps this is what allows for clusters to be found and is the most important factor to adjust when using the Algorithm. 
+
+In \cite{optimal_eps_value_DBSCAN} Rahmah and Sitanggang figure out a way to find this value using a Nearest Neighbours approach. Their approach consisted of finding the distance between one node and all other nodes and then plotting these distances as a graph. This graph can be seen in figure \ref{fig:whole_eps_graph}, the optimal eps value is when the graph starts to curve. 
 
 \begin{figure}[h]
     \centering
@@ -82,15 +84,13 @@ One of the areas that I was keen to improve on was the clustering, whilst I coul
     \label{fig:cut_eps_graph}
 \end{figure}
 
-Their approach consisted of finding the distance between one node and all other nodes and then plotting these distances as a graph. This graph can be seen in figure \ref{fig:whole_eps_graph}, the optimal eps value is when the graph starts to curve. 
-
-This can be found using the Nearest Neighbours algorithm present in Scikit Learn\cite{scikit_learn_nearest_neighbours}. To find the turning point of the graph I tried to take take the derivative and find where the change was biggest figure the graph of this is shown in figure \ref{fig:gradient_eps_graph}. This approach didn't work because if I were to take the largest gradient then I would end up with the eps value being the largest distance between two nodes which would result in DBSCAN finding a cluster that contained every node. To get around this I cut the last 1/7th off the graph and then found the highest point this graph is shown in figure \ref{fig:cut_eps_graph}. This approach worked for every piece of data that I tested it on however there may be data where this wouldn't work such as where the data increases in a circle out from central point.
+This can be found using the Nearest Neighbours algorithm present in Scikit Learn\cite{scikit_learn_nearest_neighbours}. To find the turning point of the graph I tried to take take the derivative and find where the change was biggest figure the graph of this is shown in figure \ref{fig:gradient_eps_graph}. This approach didn't work because if I were to take the largest gradient then I would end up with the eps value being the largest distance between two nodes which would result in DBSCAN finding a cluster that contained every node. To circumvent this I cut the last 1/7th off the graph and then found the highest point this graph is shown in figure \ref{fig:cut_eps_graph}. This approach worked for every piece of data that I tested it on however there may be data where this wouldn't work such as where the data increases in a circle out from central point.
 
 \subsubsection{Script Interface}
 
-I needed to create an easy way to run my program that would allow me to setup all my experiments and run them through quickly, I thought about using an web interface or building a GUI for this that would allow runs to be queued up and executed when the previous one had finished but I decided against this because I thought that it would be over complicate things and instead I wanted to focus on the research side, instead I made it execute like a script. A script allows for queuing tasks up to be ran and would be easier to implement so would give me more time to focus more on the experiments to be ran.
+I needed to create an easy way to run my program that would allow me to setup all my experiments and run them through quickly, I thought about using a web interface or building a GUI for this that would allow runs to be queued up and executed when the previous one had finished but I decided against this because I thought that it would over-complicate things and I wanted to focus on the research side. Instead I made it execute like a script. A script allows for queuing tasks to be run later and would be easier to implement giving me more time to focus on the experiments to be run.
 
-The program is constructed to allow for command line arguments to be given, these are available in Table \ref{tab:commandargs} in Appendix \ref{apd:commandline_arguments}. The arguments allow for every aspect of the program to be controlled such as; the arguments provided to the clustering algorithms and the ACO algorithms, the input file to read, output folder, the clustering and ACO algorithms to use and it allows for various features to be turned on or off. 
+The program is constructed to allow for command line arguments to be given, these are available in Table \ref{tab:commandargs} in Appendix \ref{apd:commandline_arguments}. The arguments allow for every aspect of the program to be controlled such as: the arguments provided to the clustering algorithms and the ACO algorithms, the input file to read, output folder, the clustering and ACO algorithms to use, and it allows for various features to be turned on or off. 
 
 Not all of these parameters have to be given every time you run the program only a few are essential and the parameters that are optional and aren't set are auto-populated from a list of default values, these default values are also shown in the table.
 
@@ -98,7 +98,7 @@ To hold these options values I had an Options class, this made use of pythons ab
 
 \section{Implementation}
 
-There are several key sections to my project, this section discusses the implementation of them, I made use of existing libraries in my project to speed up the work and allow me to focus more on the research. Some of these libraries needed changes so they worked the way I wanted them to and so they had all the features I needed. 
+There are several key sections to my project. This section discusses the implementation of them, I made use of existing libraries in my project to speed up the work and allow me to focus more on the research. Some of these libraries needed changes so they worked the way I wanted them to and so they had all the features I needed. 
 
 \subsection{Loading TSP Files}
 
@@ -108,19 +108,19 @@ When the file gets loaded in I turn it into a numpy\cite{numpy} array, it has to
 
 \subsubsection{Generating TSP Data}
 
-Lots of the TSP data available contains many thousands of nodes and because of their size they take a long time to run. I wanted to test my algorithm on smaller problems that contained a few hundred nodes. In order to do this I had to create my own TSP data this was a straightforward task, I created a Python file that had several parameters: amount of node, number of cluster, size of clusters and the scale that the nodes should be plotted on. This then randomly places nodes around the graph, to create clusters it randomly picks some nodes to act as cluster centres and places nodes around them.
+Lots of the TSP data available contains many thousands of nodes and because of their size they take a long time to run. I wanted to test my algorithm on smaller problems that contained a few hundred nodes. In order to do this I had to create my own TSP data this was a straightforward task, I created a Python file that had several parameters: number of nodes, number of cluster, size of clusters and the scale that the nodes should be plotted on. This then randomly places nodes around the graph, to create clusters it randomly picks some nodes to act as cluster centres and places nodes around them.
 
 The TSPs that are generated are modelled after 'world' TSPs in that they mimic real world clusters. They are not meant to look like VLSI data.
 
 \subsection{Clustering}
 
-The clustering algorithms that I wanted to implement were all available as part of the Scikt Learn library. In order to use this the data had to be available as a numpy array so I had to ensure that when I read the data in I transformed in into an array. 
+The clustering algorithms that I wanted to implement were all available as part of the Scikit Learn library. In order to use this the data had to be available as a numpy array so I had to ensure that when I read the data I transformed in into that type of array. 
 
-When the data gets clustered I needed a way to hold all the data for this I made two classes one called ClusteredData and the other called Cluster. ClusteredData holds all the nodes in the problem and all the clusters that have been created, there are two sorts of clusters that it can hold: full clusters and unclassified node clusters. Some of the clustering algorithms return nodes that don't fit into any specific cluster so I call these unclassified node clusters, these are treated differently because they don't need a tour created for them or entry/exit nodes calculated. 
+Once the data is clustered I needed a way to hold all the data, for this I made two classes: one called ClusteredData and the other called Cluster. ClusteredData holds all the nodes in the problem and all the clusters that have been created, there are two sorts of clusters that it can hold: full clusters and unclassified node clusters. Some of the clustering algorithms return nodes that don't fit into any specific cluster so I call these unclassified node clusters, these are treated differently because they don't need a tour created for them or entry/exit nodes calculated. 
 
 \subsection{Graph Plotting}
 
-I used the library Matplotlib\cite{matplotlib} to do all my graph plotting, it's very feature rich and allowed me to easily create graphs so made sense for me to use it instead of creating my own plotting library. The graphs are plotted at the end of the run so as not to slow down the program and interfere with the run time statistic.
+I used the library Matplotlib\cite{matplotlib} to do all my graph plotting, it's very feature rich and allowed me to easily create graphs, so made sense for me to use it instead of creating my own plotting library. The graphs are plotted at the end of the run so as not to slow down the program and interfere with the run time statistic.
 
 The following graphs are plotted:
 
@@ -141,9 +141,9 @@ At the end of the program when the solution has been found the graphs get plotte
 
 \subsection{ACO}
 
-I have used two ACO libraries; ACOPY\cite{acopy} and an ACO algorithm that makes use of multi-threading\cite{multithreaded_aco}. ACOPY was available as a dependency that I could install via pip, the other one was not and so I had to pull the code from its GitHub repository and use it that way. The code was meant to be ran on Python 2 and since I was using Python 3 I had to make some small changes to it in order to get it to work, these were mostly upgrading the tests and changing some parameters to be lists. 
+I have used two ACO libraries; ACOPY\cite{acopy} and an ACO algorithm that makes use of multi-threading\cite{multithreaded_aco}. ACOPY was available as a dependency that I could install via pip, the other was not and so I had to pull the code from its GitHub repository and use it that way. The code was written for Python 2 and since I was using Python 3 I had to make some small changes to it in order to get it to work, these were mostly upgrading the tests and changing some parameters to be lists. 
 
-ACOPY allowed you to add plugins to extend the functionality of the algorithm. The plugins get called at various points and allow for changes to be made to various parts of the algorithm. I created two plugins the first one records data about the current iteration including the tour and the length of this tour, the second one records the tour after every iteration into a TourImprovementAnimator object.
+ACOPY allowed you to add plugins to extend the functionality of the algorithm. The plugins are called at various points and allow for changes to be made to various parts of the algorithm. I created two plugins the first one records data about the current iteration including the tour and the length of this tour, the second one records the tour after every iteration into a TourImprovementAnimator object.
 
 The other library doesn't have plugin functionality or anything similar so I had to modify the code to get it to print out the data after every iteration and record the tour into a TourImprovementAnimator.
 
@@ -151,7 +151,7 @@ I implemented the second library because when I was running ACOPY I noticed that
 
 \subsection{2-opt}
 
-2-opt is a simple local search algorithm it can be seen as a way to smooth out a tour by deleting crossed over paths, this can be seen in figure \ref{fig:2-opt-example}. 2-opt works by removing two edges from the tour and reconnecting them, it only does this if the resultant tour will be shorter. The pseudo code is shown in Figure \ref{fig:2-opt-epseudo-code}. A complete 2-opt search will swap and compare every pair of nodes, this technique can be applied to any graph routing problem. 2-opt is applied to improve existing routes therefore it is bound by the structure that it was given and will only find the local optima for that solution as opposed to the global optima for the problem in its entirety. 
+2-opt is a simple local search algorithm, it can be seen as a way to smooth out a tour by deleting crossed over paths, this can be seen in figure \ref{fig:2-opt-example}. 2-opt works by removing two edges from the tour and reconnecting them, it only does this if the resultant tour will be shorter. The pseudo code is shown in Figure \ref{fig:2-opt-epseudo-code}. A complete 2-opt search will swap and compare every pair of nodes, this technique can be applied to any graph routing problem. 2-opt is applied to improve existing routes therefore it is bound by the structure that it is given, because of this it is only only able to find the locally optimal solution not the globally optimal solution for the problem. 
 
 \begin{figure}
     \centering
@@ -187,13 +187,13 @@ procedure 2optSwap(route, i, k) {
 
 \end{verbatim}
 \centering
-\caption{The pseudo code for the 2-opt local search algorithm.\cite{2-opt_pseudo_code}}
+\caption{The pseudo code for the 2-opt local search algorithm.\cite{2_opt_pseudo_code}}
 \label{fig:2-opt-epseudo-code}
 \end{figure}
 
-My implementation is modified slightly because a TourImprovementAnimator records the tour each time an improvement is found.
+My implementation is modified slightly because TourImprovementAnimator records the tour each time an improvement is found.
 
-The run time of 2-opt is quite high, it could be improved through the use of multi-threading so that the load was spread over the entire processor. However I was unable to do this ion the time I had and couldn't find any references to it online when I looked.
+The run time of 2-opt is quite high, it could be improved through the use of multi-threading so that the load was spread over the entire processor. However I was unable to do this in the time I had and couldn't find any references to it online when I looked.
 
 \subsection{Tours Within Clusters}
 
@@ -203,16 +203,16 @@ Tours are then found in every cluster going from the entry node to the exit node
 
 The heuristic approach works by starting at the clusters entry node and travelling to the nearest node that it hasn't previously visited and travelling to the exit node last.
 
-One problem I encountered when implementing this was that when all the tours were being combined some tours might end up reversed and this would cause what should be the exit of the cluster becoming the start node. This really affected the length of the tour. To mitigate this I implemented a dictionary that mapped the cluster to the node that it connected to. Then when the global tour gets constructed it checks this dictionary to ensure that everything is in the right order and if it isn't then it reverses the tour so it is. This solved my issue but isn't a great solution and I should have spent more time investigating this and putting in place a more robust solution but this does sole the problem.  
+One problem I encountered when implementing this was that when all the tours were being combined some tours might end up reversed and this would cause what should be the exit of the cluster becoming the start node. This really affected the length of the tour. To mitigate this I implemented a dictionary that mapped the cluster to the node that it connected to. Then when the global tour gets constructed it checks this dictionary to ensure that everything is in the right order and if it isn't then it reverses the tour so it is. This solved my issue but isn't a great solution and I should have spent more time investigating this and putting in place a more robust solution but this does solve the problem.  
 
 \section{Testing}
 
 
 \subsection{Overall Approach to Testing}
 
-I wanted as much automated testing as possible because I find it is incredibly useful to be able to test your software every time a change is made. This really allows you to be confident in the changes you are making. Due to the complicated nature of my project and the amount of time that is required for a run to successfully take place I knew that not everything would be able to be testing in this fashion.
+I wanted as much automated testing as possible because I find it is incredibly useful to be able to test software every time a change is made. This really allows one to be confident in the changes one is making. Due to the complicated nature of my project and the amount of time that is required for a run to successfully take place I knew that not everything would be able to be testing in this fashion.
 
-I utilised quite a lot of informal testing every time a new change was made I ran the code through and ensured that everything was working as it should.
+I utilised quite a lot of informal testing, every time a new change was made I ran the code through and ensured that everything was working as it should.
 
 \subsection{Automated Testing}
 
