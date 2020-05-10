@@ -4,8 +4,9 @@
 
 \section*{\centering Abstract}
 
-Include an abstract for your project. This should be approximately 300 words. 
 
-The abstract is an overview of the work you have done. Highlight the purpose of the work and the key outcomes of the work.
+This project explores the use of clustering and ACO to solve various TSPs. Various clustering methods were used and their impact on solving TSPs was assessed, as well as clustering 2-opt was also implemented and tested to see the effects that had. The goal of my project was to find a link between clustering and ACO and to see if there were certain clustering algorithms which were better suited to the complexities of TSP data. World and VLSI TSP data was assessed as part of this. K-Means, Affinity Propagation, DBSCAN and OPTICS clustering algorithms were implemented and tested.
+
+I ended up finding that most clustering algorithms didn't work very well with VLSI data, they couldn't properly cluster the complex structures present in that type of data. I did find improvements when using these algorithms with world TSP data which is less complex, this showed that improvements could be made to the run time and tour length when combing clustering with ACO.
 
 %TC:endignore

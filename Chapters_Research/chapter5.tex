@@ -1,20 +1,49 @@
 \chapter{Evaluation}
 
-Examiners expect to find a section addressing questions such as:
+In my project I have shown that the performance of ACO can be improved through the use of a clustering algorithm and gone some way to find what that clustering algorithm should be. I have also shown the poor performance of clustering algorithms on complex VLSI data and how 2-opt can help improve upon tours and how the clustering algorithms all return data in a similar structure which allows 2-opt to find similar tours amongst all clustering algorithms.
 
-\begin{itemize}
-   \item Were the requirements correctly identified? 
-   \item Were the design decisions correct?
-   \item Could a more suitable set of tools have been chosen?
-   \item How well did the software meet the needs of those who were expecting to use it?
-   \item How well were any other project aims achieved?
-   \item If you were starting again, what would you do differently?
-\end{itemize}
+\section{Process}
 
-Other questions can be addressed as appropriate for a project. 
+I adopted a version of Scrum I followed it reasonably closely and the use of Jira definitely helped. I weekly sprints a really good way of planning my next week, however sometime I didn't follow them all that closely or I let me sprints take longer than a week. I could of followed this process a bit closer. 
 
-Such material is regarded as an important part of your work; it should demonstrate that you are capable not only of carrying out a piece of work but also of thinking critically about how you did it and how you might have done it better. This is seen as an important part of an honours degree. 
+I implemented all the requirements that were needed to run my tests and there was only one feature that I would of liked to implement but ran out of time to do so and this was an improved clustering algorithm. This was always an extension feature but if I had focused more on it and given it a higher priority then I might of been able to do it. 
 
-There will be good things and room for improvement with any project. As you write this section, identify and discuss the parts of the work that went well and also consider ways in which the work could be improved. 
+\section{Implementation}
 
-In the latter stages of the module, we will discuss the evaluation. That will probably be around week 9, although that differs each year. 
+I'm happy with my code and my implementation I feel that I made a good choice using Python even though it's quite a slow language to run it is easy to write and comes with lots of useful features and libraries which sped up the implementation phase of my project.
+
+The run time of the experiments was a big problem and if I had chosen C++ then this would of been less of an issue. C++ is a much faster language and would of allowed me to run more experiments and investigate more questions.
+
+\subsection{Testing}
+
+There was not very much testing and I did make up for this with my own manual testing this was not controlled there was no test table I just ran through the algorithm and ensured it worked but there was no method to this testing. I should of implemented more unit tests that covered everything in the project. I did unit test some areas but I felt that unit testing the entire project would be too complex and take a long time, maybe this is true but it would of given me more confidence in my code and allow for errors in my code to be spotted a lot quicker.
+
+\section{Experiments}
+
+I'm mostly pleased with the results I achieved in my experiments however there were a few problems 
+
+I didn't anticipate how long these experiments would take to run especially for the larger problems. I ended up spending 345 hours running these algorithms which was much longer than I had planned it would take. Most of this time was spent running the larger problems and I could have saved a considerable amount of time if I had chosen smaller sized problems.
+
+I also didn't want to use my computer when I was running these tests in case my use negatively impacted the run time of the algorithms so I couldn't do work on my report. If I had access to another computer then I could have left my computer running these tests and work on my report, due to the current circumstances and not being able to use any University facilities this was not possible.
+
+The experiment looking into ACO parameters didn't show any significant results, if I had varied more parameters at one time then this would not of been a problem. I didn't have time to do this in my project especially towards the end, if I had spent less time running tests on larger problem files then I might of had time to run more experiments and could have potentially answered this question better.
+
+I could have been more efficient with my experiments and carried them out in a more automated way, the way I did them I ran the experiments but then had to go through the log files to extract the run time and distance information. This slowed down the process and was a very tedious task. I also did the 2-opt runs separate to the non 2-opt runs which slowed me down and duplicated a lot of the work I had to do, what I should have done instead is have those run once and then record the time taken and tour lengths before and after 2-opt.
+
+\section{Future Work}
+
+This project is very broad and covers lots of areas of Computer Science, this means that there were features I would have liked to implement and experiments I would of liked to have ran but couldn't due to the short nature of this project
+
+It would have been interesting to look at what the optimal K-Means value is for a piece of data. As I have shown K-Means is sometimes the best performing clustering algorithm however it needs a k value so it knows how many clusters to create in the data. This k value may be related to the size of the data, if several k values were chosen for several pieces of data then a pattern may emerge and you may be able to show what the optimal.
+
+There are other clustering algorithms that I didn't experiment with, it may be possible that one of these performs better with TSP data or one of these is better suited to VLSI data. My experiments showed that VLSI data is very tricky to cluster and all the algorithms that I have implemented do quite a poor job. There may be an already created clustering algorithm that performs really well on this type of data.
+
+The experiment where I tested optimal ACO values didn't yield any significant results. This was down to the tests only changing one parameter at a time and ACO is dependent on many parameters it would be nice to re-do this experiment and change many parameters at one time, this would take a long time to run and would be thousands of ACO runs.
+
+One of the things I wanted to do but didn't have enough time for was to create a new clustering algorithm that expands to fit the complex data present in TSPs. This would be similar to the algorithm developed in \cite{pang_chao-yang_ben-qiong_zhang_jie_wei_shan_zheng-chao_2014}, it would map out the expansions of data and then cluster to fit those expansions. This should result in shorter tours that are found quicker but required a lot of work that I didn't have time for.
+
+\section{What I Would Do Differently}
+
+If I was to redo this project I would give myself longer to run the experiments this was in my opinion the biggest failure in my project, if I had started running experiments earlier or had access to more computers then this would not of been a big problem. I would also run the experiments on smaller problems instead of choosing 100, 200 and 300 node problems I should of chosen 100, 150 and 200 node problems, the larger problems took too long to run and could of benefited from the ACO being ran for more iterations.
+
+I would of also spent more time focusing on the better clustering algorithm this is a feature that would result in a big improvement in tours and a reduction in run time. I would focus much more time on this feature.

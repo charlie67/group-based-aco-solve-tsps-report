@@ -46,9 +46,16 @@ My program works by:
     \item Plot all the graphs
 \end{enumerate}
 
+Figure \ref{fig:run_diagram} illustrates how the program works, starting in section A the data is clustered, then in B the ACO tour is ran, in C the entry and exit nodes are found for each cluster and in section D tours are found for each cluster and 2-opt is ran.
+
 The output of the program gets saved to a log file for future reference.
 
-I wanted to be able to create my own TSP data this was because there wasn't a huge amount of small TSP data. Lots of it was several thousand nodes in size and I wanted to test my algorithm on problems containing hundreds of nodes because it would have taken too long to tests on these very large multi-thousand node problems.
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{figures/diagram_design_how.png}
+    \caption{This figure shows the steps the program takes: clustering, ACO tour, finding the entry and exit nodes for each cluster and then finally finding tours withing each cluster and bringing it together.}
+    \label{fig:run_diagram}
+\end{figure}
 
 \subsubsection{Automated DBSCAN eps}
 
@@ -101,6 +108,9 @@ When the file gets loaded in I turn it into a numpy\cite{numpy} array, it has to
 
 \subsubsection{Generating TSP Data}
 
+Lots of the TSP data available contains many thousands of nodes and because of their size they take a long time to run. I wanted to test my algorithm on smaller problems that contained a few hundred nodes. In order to do this I had to create my own TSP data this was a straightforward task, I created a Python file that had several parameters: amount of node, number of cluster, size of clusters and the scale that the nodes should be plotted on. This then randomly places nodes around the graph, to create clusters it randomly picks some nodes to act as cluster centres and places nodes around them.
+
+The TSPs that are generated are modelled after 'world' TSPs in that they mimic real world clusters. They are not meant to look like VLSI data.
 
 \subsection{Clustering}
 
@@ -141,25 +151,49 @@ I implemented the second library because when I was running ACOPY I noticed that
 
 \subsection{2-opt}
 
-2-opt is a simple local search algorithm it can be seen as a way to smooth out a tour by deleting crossed over paths, this can be seen in figure \ref{fig:2-opt-example}. 2-opt works by removing two edges from the tour and reconnecting them, it only does this if the resultant tour will be shorter. The pseudo code is shown in Figure \ref{fig:2-opt-epseudo-code}.
+2-opt is a simple local search algorithm it can be seen as a way to smooth out a tour by deleting crossed over paths, this can be seen in figure \ref{fig:2-opt-example}. 2-opt works by removing two edges from the tour and reconnecting them, it only does this if the resultant tour will be shorter. The pseudo code is shown in Figure \ref{fig:2-opt-epseudo-code}. A complete 2-opt search will swap and compare every pair of nodes, this technique can be applied to any graph routing problem. 2-opt is applied to improve existing routes therefore it is bound by the structure that it was given and will only find the local optima for that solution as opposed to the global optima for the problem in its entirety. 
 
-\begin{figure}[h]
+\begin{figure}
     \centering
     \includegraphics[width=\textwidth]{figures/2-opt-example.png}
     \caption{An example of 2-opt running over a tour. It has swapped the connection b-e and f-c which has removed the cross and made the tour shorter.\cite{2_opt_example_picture}}
     \label{fig:2-opt-example}
 \end{figure}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{figures/2_opt_pseudo_code.jpg}
-    \caption{The pseudo code for the 2-opt local search algorithm.\cite{2-opt_pseudo_code}}
-    \label{fig:2-opt-epseudo-code}
+\begin{figure}
+\begin{verbatim}
+repeat until no improvement is made {
+    start_again:
+    best_distance = calculateTotalDistance(existing_route)
+    for (i = 1; i <= number of nodes eligible to be swapped - 1; i++) {
+        for (k = i + 1; k <= number of nodes eligible to be swapped; k++) {
+            new_route = 2optSwap(existing_route, i, k)
+            new_distance = calculateTotalDistance(new_route)
+            if (new_distance < best_distance) {
+                existing_route = new_route
+                best_distance = new_distance
+                goto start_again
+            }
+        }
+    }
+}
+
+procedure 2optSwap(route, i, k) {
+    1. take route[0] to route[i-1] and add them in order to new_route
+    2. take route[i] to route[k] and add them in reverse order to new_route
+    3. take route[k+1] to end and add them in order to new_route
+    return new_route;
+}
+
+\end{verbatim}
+\centering
+\caption{The pseudo code for the 2-opt local search algorithm.\cite{2-opt_pseudo_code}}
+\label{fig:2-opt-epseudo-code}
 \end{figure}
 
 My implementation is modified slightly because a TourImprovementAnimator records the tour each time an improvement is found.
 
-The run time of 2-opt is quite high and it could be improved through the use of multi-threading but I was unable to do this and couldn't find any references to it online when I looked.
+The run time of 2-opt is quite high, it could be improved through the use of multi-threading so that the load was spread over the entire processor. However I was unable to do this ion the time I had and couldn't find any references to it online when I looked.
 
 \subsection{Tours Within Clusters}
 
@@ -168,6 +202,8 @@ When the ACO tour over the clustered data has finished I needed a way of turning
 Tours are then found in every cluster going from the entry node to the exit node, these tours can be found by using ACO and by using a greedy nearest neighbour heuristic. The ACO approach uses the ACO algorithm that the user has specified, when this is used the end node is not included in the ACO search this is because the ACO algorithm has no way to specify the end node. To get around this I add the end node on when the search has finished however this can cause bad unoptimised tours.
 
 The heuristic approach works by starting at the clusters entry node and travelling to the nearest node that it hasn't previously visited and travelling to the exit node last.
+
+One problem I encountered when implementing this was that when all the tours were being combined some tours might end up reversed and this would cause what should be the exit of the cluster becoming the start node. This really affected the length of the tour. To mitigate this I implemented a dictionary that mapped the cluster to the node that it connected to. Then when the global tour gets constructed it checks this dictionary to ensure that everything is in the right order and if it isn't then it reverses the tour so it is. This solved my issue but isn't a great solution and I should have spent more time investigating this and putting in place a more robust solution but this does sole the problem.  
 
 \section{Testing}
 

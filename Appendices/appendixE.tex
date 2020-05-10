@@ -1,0 +1,1101 @@
+\chapter{Full Result Tables}\label{apd:result_tables}
+
+This appendix shows the full results of every run of the algorithms that were tested. Each algorithm was ran and tests 10 times in order to be sure of the results. 
+
+\section{Results for the 100\_node world TSP}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO      & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO      & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 548.0368 & 37.5686    & 53.8450    & 61.9610                  & 41.1825     \\ \hline
+Run 2   & 547.4629 & 53.2923    & 52.2251    & 60.0386                  & 46.6111     \\ \hline
+Run 3   & 468.2824 & 49.9630    & 65.2038    & 76.4854                  & 40.3308     \\ \hline
+Run 4   & 433.0344 & 48.6575    & 46.6626    & 74.4960                  & 38.4250     \\ \hline
+Run 5   & 443.9451 & 43.3818    & 55.9660    & 78.9418                  & 42.7183     \\ \hline
+Run 6   & 463.1204 & 57.1007    & 54.6447    & 86.0078                  & 44.9315     \\ \hline
+Run 7   & 497.1511 & 63.9214    & 46.0910    & 70.9187                  & 41.6454     \\ \hline
+Run 8   & 418.6436 & 55.3296    & 51.2876    & 61.7921                  & 37.9766     \\ \hline
+Run 9   & 399.4332 & 54.1057    & 70.1917    & 76.6171                  & 32.7944     \\ \hline
+Run 10  & 369.4148 & 54.7489    & 51.6086    & 63.7280                  & 44.5695     \\ \hline
+        &          &            &            &                          &             \\ \hline
+Average & 458.852  & 51.807     & 54.773     & 71.099                   & 41.119      \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the 100\_node TSP.}
+\label{tab:experiment_100_node_run_time}\\
+\end{longtable}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+                    & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1               & 27933.3348 & 26900.2949 & 26800.3833 & 27462.8925               & 26623.2534  \\ \hline
+Run 2               & 25670.7105 & 25638.2198 & 26517.6146 & 29929.4062               & 26536.0405  \\ \hline
+Run 3               & 27702.0411 & 27216.4044 & 25762.5205 & 27341.6985               & 26076.0638  \\ \hline
+Run 4               & 27187.1263 & 25760.7454 & 26385.7746 & 29297.7341               & 26087.2928  \\ \hline
+Run 5               & 27323.5354 & 26542.2305 & 27193.8305 & 30290.9603               & 26343.0451  \\ \hline
+Run 6               & 26927.4179 & 27001.5081 & 27459.0253 & 28423.6500               & 26067.0139  \\ \hline
+Run 7               & 27914.5516 & 26266.9891 & 27047.5641 & 28494.2947               & 26380.0738  \\ \hline
+Run 8               & 26628.3267 & 27396.0943 & 26820.5083 & 28172.4202               & 27232.3450  \\ \hline
+Run 9               & 26809.8100 & 26663.7464 & 27330.7518 & 29821.4732               & 26572.0905  \\ \hline
+Run 10              & 28220.2491 & 26290.0113 & 27100.8237 & 28301.3084               & 25424.0354  \\ \hline
+                    &            &            &            &                          &             \\ \hline
+Average             & 27231.710  & 26567.624  & 26841.880  & 28753.584                & 26334.125   \\ \hline
+Min                 & 25670.711  & 25638.220  & 25762.521  & 27341.699                & 25424.035   \\ \hline
+Max                 & 28220.249  & 27396.094  & 27459.025  & 30290.960                & 27232.345   \\ \hline
+Lower Quartile & 26839.212  & 26272.745  & 26588.307  & 28204.642                & 26078.871   \\ \hline
+Upper Quartile      & 27861.424  & 26976.205  & 27170.579  & 29690.538                & 26563.078   \\ \hline
+\caption{This table shows the distances achieved when running these algorithms against the 100\_node TSP.}
+\label{tab:experiment_100_node_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the 200\_node world TSP Problem}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 4943.1326 & 346.2971   & 316.4992   & 302.7357                 & 144.9856    \\ \hline
+Run 2   & 5854.1935 & 309.8841   & 337.1030   & 334.7243                 & 172.2227    \\ \hline
+Run 3   & 5304.8747 & 301.7641   & 249.6396   & 298.5803                 & 130.8110    \\ \hline
+Run 4   & 5778.5490 & 333.4568   & 317.7126   & 246.4579                 & 134.0408    \\ \hline
+Run 5   & 5298.9043 & 333.0423   & 361.8437   & 302.1659                 & 214.2991    \\ \hline
+Run 6   & 6273.1765 & 315.3406   & 236.3493   & 230.2907                 & 182.6765    \\ \hline
+Run 7   & 5877.2401 & 317.0160   & 270.9441   & 269.3705                 & 146.1649    \\ \hline
+Run 8   & 4371.9718 & 310.3512   & 273.3895   & 356.1423                 & 154.3833    \\ \hline
+Run 9   & 4438.7181 & 327.4474   & 216.4325   & 293.1362                 & 224.1060    \\ \hline
+Run 10  & 4861.5087 & 317.5630   & 278.8239   & 268.1573                 & 150.5188    \\ \hline
+        &           &            &            &                          &             \\ \hline
+Average & 5300.227  & 321.216    & 285.874    & 290.176                  & 165.421     \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the 200\_node TSP.}
+\label{tab:experiment_200_node_run_time}\\
+\end{longtable}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+               & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1          & 46868.0721 & 44496.2707 & 45787.4883 & 49496.7962               & 48061.5597  \\ \hline
+Run 2          & 47685.4376 & 44101.8620 & 45663.7971 & 50188.2890               & 45584.1411  \\ \hline
+Run 3          & 48551.1034 & 43151.8166 & 46202.3052 & 50155.2455               & 44717.2019  \\ \hline
+Run 4          & 46228.8894 & 44245.1721 & 46067.5228 & 50036.7192               & 45878.0255  \\ \hline
+Run 5          & 46543.3669 & 43610.1836 & 45217.2030 & 50505.2295               & 45105.9546  \\ \hline
+Run 6          & 48360.3452 & 44838.3506 & 46065.2105 & 50968.3404               & 45173.8402  \\ \hline
+Run 7          & 46300.1301 & 43997.7925 & 46622.1154 & 49377.8502               & 46442.4563  \\ \hline
+Run 8          & 47789.2650 & 43899.2898 & 45340.0779 & 49330.7789               & 44873.2572  \\ \hline
+Run 9          & 47382.3466 & 43169.3952 & 45994.7662 & 50362.9112               & 44651.8669  \\ \hline
+Run 10         & 48638.2005 & 45090.7462 & 45953.3988 & 49872.0534               & 46848.7596  \\ \hline
+               &            &            &            &                          &             \\ \hline
+Average        & 47434.716  & 44060.088  & 45891.389  & 50029.421                & 45733.706   \\ \hline
+Min            & 46228.889  & 43151.817  & 45217.203  & 49330.779                & 44651.867   \\ \hline
+Max            & 48638.201  & 45090.746  & 46622.115  & 50968.340                & 48061.560   \\ \hline
+Lower Quartile & 46624.543  & 43682.460  & 45694.720  & 49590.611                & 44931.432   \\ \hline
+Upper Quartile & 48217.575  & 44433.496  & 46066.945  & 50319.256                & 46301.349   \\ \hline
+\caption{This table shows the distances achieved when running these algorithms against the 200\_node problem.}
+\label{tab:experiment_200_node_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the 300\_node world TSP Problem}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 23970.1549 & 1963.7222  & 2296.4856  & 941.1613                 & 724.7771    \\ \hline
+Run 2   & 23021.0769 & 1914.7316  & 2137.0369  & 809.3059                 & 622.2242    \\ \hline
+Run 3   & 23828.0883 & 1374.9953  & 2116.9046  & 942.8309                 & 556.8667    \\ \hline
+Run 4   & 21964.0354 & 1238.6189  & 2015.6931  & 697.0039                 & 425.6930    \\ \hline
+Run 5   & 21221.4596 & 1537.0459  & 3248.6542  & 719.1227                 & 467.4543    \\ \hline
+Run 6   & 19901.8403 & 1946.4423  & 2919.5479  & 608.8095                 & 652.6347    \\ \hline
+Run 7   & 21071.0521 & 1459.2932  & 3133.8709  & 775.6309                 & 617.1390    \\ \hline
+Run 8   & 19966.8730 & 1712.5366  & 2248.7612  & 615.3029                 & 512.0753    \\ \hline
+Run 9   & 17973.5574 & 1258.7350  & 2167.4256  & 603.6770                 & 368.0376    \\ \hline
+Run 10  & 17766.0067 & 1594.3153  & 2812.7723  & 657.9411                 & 373.0637    \\ \hline
+        &            &            &            &                          &             \\ \hline
+Average & 20745.999  & 1600.044   & 2509.715   & 737.079                  & 531.997     \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the 300\_node TSP.}
+\label{tab:experiment_300_node_run_time}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+               & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1          & 72687.9937 & 69013.9785 & 67321.0254 & 72523.3026               & 69865.0908  \\ \hline
+Run 2          & 70520.1104 & 67611.0995 & 67985.4461 & 72391.0680               & 71408.8437  \\ \hline
+Run 3          & 70616.1582 & 68967.0745 & 69237.0983 & 71086.1421               & 74149.1906  \\ \hline
+Run 4          & 69883.7860 & 68095.0908 & 69249.0046 & 70338.3673               & 71557.4207  \\ \hline
+Run 5          & 69438.0023 & 68487.9405 & 67724.3677 & 70799.0223               & 72457.9208  \\ \hline
+Run 6          & 69628.9762 & 67925.9114 & 68124.0066 & 73081.2222               & 71184.7055  \\ \hline
+Run 7          & 72510.9921 & 66760.3157 & 67639.7669 & 71086.6324               & 74055.3587  \\ \hline
+Run 8          & 69233.7315 & 67953.4055 & 67769.4028 & 71751.9284               & 71780.5943  \\ \hline
+Run 9          & 71135.8786 & 67774.2261 & 66973.4342 & 70685.3593               & 70120.4776  \\ \hline
+Run 10         & 69322.1694 & 67045.8885 & 68024.3519 & 72035.8033               & 74727.2330  \\ \hline
+               &            &            &            &                          &             \\ \hline
+Average        & 70497.780  & 67963.493  & 68004.790  & 71577.885                & 72130.684   \\ \hline
+Min            & 69233.732  & 66760.316  & 66973.434  & 70338.367                & 69865.091   \\ \hline
+Max            & 72687.994  & 69013.979  & 69249.005  & 73081.222                & 74727.233   \\ \hline
+Lower Quartile & 69485.746  & 67651.881  & 67660.917  & 70870.802                & 71240.740   \\ \hline
+Upper Quartile & 71005.948  & 68389.728  & 68099.093  & 72302.252                & 73655.999   \\ \hline
+\caption{This table shows the distances achieved when running these algorithms against the 300\_node problem.}
+\label{tab:experiment_300_node_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the 100\_node world TSP with 2-OPT}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{1.3cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 54.4026          & 79.4175                        & 56.4434           \\ \hline
+Run 2   & 58.8288          & 89.215                         & 62.3287           \\ \hline
+Run 3   & 75.3121          & 96.3503                        & 60.0739           \\ \hline
+Run 4   & 82.0163          & 68.1113                        & 48.0929           \\ \hline
+Run 5   & 72.8495          & 94.8649                        & 64.0068           \\ \hline
+Run 6   & 81.9422          & 83.2162                        & 37.2614           \\ \hline
+Run 7   & 71.8964          & 96.2076                        & 48.0963           \\ \hline
+Run 8   & 86.1933          & 91.7541                        & 49.6199           \\ \hline
+Run 9   & 91.2085          & 93.1417                        & 54.0498           \\ \hline
+Run 10  & 73.2568          & 70.5788                        & 54.6654           \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 74.791           & 86.286                         & 53.464            \\ \hline
+\caption{This table shows the run times that were achieved when running these algorithms against the 100\_node TSP.}
+\label{tab:experiment_100_node_run_time_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1               & 24539.3625       & 24209.0008                     & 24792.9461        \\ \hline
+Run 2               & 24483.6686       & 24156.5363                     & 24520.8695        \\ \hline
+Run 3               & 24507.4308       & 24374.5593                     & 24151.191         \\ \hline
+Run 4               & 24483.6686       & 24584.6165                     & 24548.3878        \\ \hline
+Run 5               & 24628.027        & 24270.3422                     & 24886.6339        \\ \hline
+Run 6               & 24729.051        & 24541.5134                     & 23931.2681        \\ \hline
+Run 7               & 24549.698        & 24933.7427                     & 24158.7485        \\ \hline
+Run 8               & 24817.5863       & 24112.2241                     & 24552.0514        \\ \hline
+Run 9               & 24296.5307       & 25757.4362                     & 24762.739         \\ \hline
+Run 10              & 24220.6641       & 24637.5231                     & 24664.2679        \\ \hline
+                    &                  &                                &                   \\ \hline
+Average             & 24525.569        & 24557.749                      & 24496.910         \\ \hline
+Min                 & 24220.664        & 24112.224                      & 23931.268         \\ \hline
+Max                 & 24817.586        & 25757.436                      & 24886.634         \\ \hline
+Lower Quartile & 24483.669        & 24224.336                      & 24249.279         \\ \hline
+Upper Quartile      & 24608.445        & 24624.296                      & 24738.121         \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the 100\_node TSP.}
+\label{tab:experiment_100_node_distances_2_opt}\\
+\end{longtable}
+
+
+
+\section{Results for the 200\_node world TSP with 2-OPT}
+
+\begin{longtable}[c]{|p{1.3cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 527.2250         & 470.9614                       & 309.2728          \\ \hline
+Run 2   & 565.5909         & 434.8220                       & 310.5500          \\ \hline
+Run 3   & 557.5617         & 447.8715                       & 266.2031          \\ \hline
+Run 4   & 642.7290         & 425.7176                       & 402.0232          \\ \hline
+Run 5   & 377.8705         & 449.9084                       & 340.5137          \\ \hline
+Run 6   & 551.0622         & 286.4780                       & 331.8092          \\ \hline
+Run 7   & 465.2612         & 439.8336                       & 221.2628          \\ \hline
+Run 8   & 489.9301         & 331.8191                       & 266.2967          \\ \hline
+Run 9   & 451.3159         & 354.1595                       & 361.3532          \\ \hline
+Run 10  & 485.8844         & 341.8834                       & 362.4218          \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 511.443          & 398.345                        & 317.171           \\ \hline
+\caption{This table shows the run times that were achieved when running these algorithms against the 200\_node TSP.}
+\label{tab:experiment_200_node_run_time_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1               & 40661.0042       & 41355.9398                     & 41737.4836        \\ \hline
+Run 2               & 41034.6474       & 40999.9487                     & 39598.5932        \\ \hline
+Run 3               & 40997.3587       & 41241.4137                     & 40137.0912        \\ \hline
+Run 4               & 41126.3773       & 40921.3483                     & 39320.1496        \\ \hline
+Run 5               & 42011.3091       & 41116.6489                     & 39914.2431        \\ \hline
+Run 6               & 41368.5779       & 42951.2243                     & 39388.4278        \\ \hline
+Run 7               & 40626.2128       & 40514.0743                     & 39892.9394        \\ \hline
+Run 8               & 42479.2803       & 41601.6396                     & 40327.7035        \\ \hline
+Run 9               & 41169.7338       & 42476.6788                     & 40348.8922        \\ \hline
+Run 10              & 40331.4968       & 41748.0012                     & 39843.4243        \\ \hline
+                    &                  &                                &                   \\ \hline
+Average             & 41180.600        & 41492.692                      & 40050.895         \\ \hline
+Min                 & 40331.497        & 40514.074                      & 39320.150         \\ \hline
+Max                 & 42479.280        & 42951.224                      & 41737.484         \\ \hline
+Lower Quartile & 40745.093        & 41029.124                      & 39659.801         \\ \hline
+Upper Quartile      & 41318.867        & 41711.411                      & 40280.050         \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the 200\_node TSP}
+\label{tab:experiment_200_node_distances_2_opt}\\
+\end{longtable}
+
+
+
+\section{Results for the 300\_node world TSP with 2-OPT}
+
+\begin{longtable}[c]{|p{1.3cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 2800.8005        & 1409.4426                      & 1100.5299         \\ \hline
+Run 2   & 2550.6526        & 1157.3346                      & 836.9332          \\ \hline
+Run 3   & 2629.4046        & 1359.5520                      & 1218.8894         \\ \hline
+Run 4   & 3249.4513        & 1348.7634                      & 1552.3758         \\ \hline
+Run 5   & 3463.4589        & 924.1778                       & 1094.4919         \\ \hline
+Run 6   & 3339.1414        & 1118.2798                      & 805.5618          \\ \hline
+Run 7   & 3155.2114        & 1143.7757                      & 1193.1680         \\ \hline
+Run 8   & 2496.1927        & 1473.4895                      & 1337.1331         \\ \hline
+Run 9   & 2971.3462        & 955.9030                       & 1051.7787         \\ \hline
+Run 10  & 3334.6078        & 1660.1943                      & 897.7349          \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 2999.027         & 1255.091                       & 1108.860          \\ \hline
+\caption{This table shows the run times that were achieved when running these algorithms against the 300\_node TSP.}
+\label{tab:experiment_300_node_run_time_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1          & 58918.9751       & 61722.9167                     & 63217.0562        \\ \hline
+Run 2          & 59461.9552       & 61533.6948                     & 60511.0272        \\ \hline
+Run 3          & 59889.5577       & 61912.9025                     & 62019.6435        \\ \hline
+Run 4          & 60103.4204       & 61229.2846                     & 61378.8006        \\ \hline
+Run 5          & 60016.8480       & 62962.4891                     & 62714.3694        \\ \hline
+Run 6          & 59414.4440       & 61273.4535                     & 63322.6507        \\ \hline
+Run 7          & 59618.6493       & 63336.3597                     & 61799.6200        \\ \hline
+Run 8          & 59880.2975       & 61634.5920                     & 63167.4154        \\ \hline
+Run 9          & 60141.2188       & 62873.5010                     & 63607.0435        \\ \hline
+Run 10         & 59828.7509       & 60630.5495                     & 61382.2774        \\ \hline
+               &                  &                                &                   \\ \hline
+Average        & 59727.412        & 61910.974                      & 62311.990         \\ \hline
+Min            & 58918.975        & 60630.550                      & 60511.027         \\ \hline
+Max            & 60141.219        & 63336.360                      & 63607.044         \\ \hline
+Lower Quartile & 59501.129        & 61338.514                      & 61486.613         \\ \hline
+Upper Quartile & 59985.025        & 62633.351                      & 63204.646         \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the 300\_node TSP.}
+\label{tab:experiment_300_node_distances_2_opt}\\
+\end{longtable}
+
+
+\section{Results for the XQF131 VLSI TSP Problem}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 1098.3197 & 160.4468   & 283.4923   & 95.2199                  & 43.4730     \\ \hline
+Run 2   & 1133.2515 & 189.7750   & 342.2120   & 93.7270                  & 61.6124     \\ \hline
+Run 3   & 1292.6273 & 189.2090   & 369.1350   & 93.3765                  & 62.8876     \\ \hline
+Run 4   & 1259.9384 & 177.2787   & 302.3770   & 95.2009                  & 63.0672     \\ \hline
+Run 5   & 1172.9672 & 169.9185   & 306.3125   & 78.8130                  & 66.3319     \\ \hline
+Run 6   & 1030.0104 & 149.0016   & 322.8893   & 89.4635                  & 48.0135     \\ \hline
+Run 7   & 1076.9547 & 181.3990   & 255.7649   & 86.2794                  & 64.9803     \\ \hline
+Run 8   & 1349.4269 & 158.3248   & 290.4334   & 85.2846                  & 57.5973     \\ \hline
+Run 9   & 1145.7171 & 142.3070   & 344.6103   & 87.3314                  & 51.4007     \\ \hline
+Run 10  & 1387.1672 & 162.4991   & 315.0866   & 68.6360                  & 51.0356     \\ \hline
+        &           &            &            &                          &             \\ \hline
+Average & 1194.638  & 168.016    & 313.231    & 87.333                   & 57.040      \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the XQF131 VLSI TSP.}
+\label{tab:experiment_xqf131_run_time}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+               & ACO      & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO      & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1          & 664.9760 & 722.9241   & 721.7329   & 709.1553                 & 665.4759    \\ \hline
+Run 2          & 672.2569 & 683.0529   & 685.4278   & 702.9774                 & 703.7581    \\ \hline
+Run 3          & 665.6010 & 741.6788   & 695.5016   & 696.2131                 & 705.3772    \\ \hline
+Run 4          & 691.9477 & 757.3666   & 676.1095   & 709.7986                 & 691.2313    \\ \hline
+Run 5          & 669.1965 & 750.3136   & 664.4141   & 707.5574                 & 693.1967    \\ \hline
+Run 6          & 670.4169 & 707.6512   & 665.4831   & 729.4337                 & 680.9003    \\ \hline
+Run 7          & 669.3669 & 730.8684   & 699.0023   & 699.5182                 & 698.7583    \\ \hline
+Run 8          & 662.8438 & 754.8363   & 658.7602   & 695.9957                 & 734.8350    \\ \hline
+Run 9          & 687.5835 & 725.8753   & 698.8631   & 722.6430                 & 720.4167    \\ \hline
+Run 10         & 664.0711 & 698.8142   & 680.4359   & 729.8407                 & 681.5690    \\ \hline
+               &          &            &            &                          &             \\ \hline
+Average        & 671.826  & 727.338    & 684.573    & 710.313                  & 697.552     \\ \hline
+Min            & 662.844  & 683.053    & 658.760    & 695.996                  & 665.476     \\ \hline
+Max            & 691.948  & 757.367    & 721.733    & 729.841                  & 734.835     \\ \hline
+Lower Quartile & 665.132  & 711.469    & 668.140    & 700.383                  & 683.985     \\ \hline
+Upper Quartile & 671.797  & 748.155    & 698.023    & 719.432                  & 704.972     \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the XQF131 VLSI TSP.}
+\label{tab:experiment_xqf131_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the XQG237 VLSI TSP Problem}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 8987.7696  & 1031.4101  & 2693.5674  & 359.8654                 & 242.6668    \\ \hline
+Run 2   & 8894.2334  & 1376.4956  & 2791.9786  & 354.2494                 & 290.2918    \\ \hline
+Run 3   & 9100.6772  & 1185.9636  & 3007.7601  & 367.2868                 & 198.1292    \\ \hline
+Run 4   & 7944.6061  & 1183.4166  & 2872.2159  & 328.2263                 & 260.8795    \\ \hline
+Run 5   & 12083.4255 & 1334.4486  & 3239.4542  & 387.8685                 & 260.2175    \\ \hline
+Run 6   & 10604.7131 & 1193.8127  & 3225.9221  & 374.0039                 & 187.9657    \\ \hline
+Run 7   & 10720.0981 & 1173.2428  & 3719.3666  & 277.3558                 & 210.1434    \\ \hline
+Run 8   & 10660.6623 & 1212.0065  & 3037.0103  & 354.6869                 & 212.9413    \\ \hline
+Run 9   & 9198.7836  & 928.1571   & 2509.4199  & 246.3453                 & 206.1916    \\ \hline
+Run 10  & 9110.1362  & 914.2931   & 2241.6487  & 279.5753                 & 284.2039    \\ \hline
+        &            &            &            &                          &             \\ \hline
+Average & 9730.511   & 1153.325   & 2933.834   & 332.946                  & 235.363     \\ \hline
+\caption{This table shows the run times that were achieved when running these algorithms against the XQG237 VLSI TSP.}
+\label{tab:experiment_xqg237_run_time}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+               & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1          & 1277.9507 & 1261.8786  & 1280.2145  & 1277.6215                & 1279.1643   \\ \hline
+Run 2          & 1277.3639 & 1250.5674  & 1253.1271  & 1299.2248                & 1281.8072   \\ \hline
+Run 3          & 1277.0572 & 1252.9562  & 1258.6661  & 1317.4112                & 1285.2476   \\ \hline
+Run 4          & 1249.7202 & 1249.0454  & 1247.3256  & 1295.1540                & 1269.4758   \\ \hline
+Run 5          & 1239.9785 & 1257.7333  & 1253.6764  & 1305.3528                & 1293.3462   \\ \hline
+Run 6          & 1299.0605 & 1250.8799  & 1257.8770  & 1284.8513                & 1273.8424   \\ \hline
+Run 7          & 1296.8830 & 1231.8397  & 1245.9745  & 1284.4354                & 1301.7477   \\ \hline
+Run 8          & 1295.3982 & 1235.3620  & 1297.2478  & 1298.4014                & 1288.6379   \\ \hline
+Run 9          & 1278.4611 & 1220.5063  & 1245.2596  & 1320.2096                & 1307.5294   \\ \hline
+Run 10         & 1273.7200 & 1244.3944  & 1288.2203  & 1286.7206                & 1311.9941   \\ \hline
+               &           &            &            &                          &             \\ \hline
+Average        & 1276.559  & 1245.516   & 1262.759   & 1296.938                 & 1289.279    \\ \hline
+Min            & 1239.979  & 1220.506   & 1245.260   & 1277.622                 & 1269.476    \\ \hline
+Max            & 1299.061  & 1261.879   & 1297.248   & 1320.210                 & 1311.994    \\ \hline
+Lower Quartile & 1274.554  & 1237.620   & 1248.776   & 1285.319                 & 1279.825    \\ \hline
+Upper Quartile & 1291.164  & 1252.437   & 1274.827   & 1303.821                 & 1299.647    \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the XQG237 VLSI TSP.}
+\label{tab:experiment_xqg237_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the PBM436 VLSI TSP Problem}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO        & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1   & 84474.6163 & 9834.2862  & 21509.9761 & 1422.7205                & 1267.8790   \\ \hline
+Run 2   & Not ran    & 10009.0188 & 19717.2147 & 1771.2788                & 1550.8583   \\ \hline
+Run 3   & Not ran    & 9349.9204  & 14891.7412 & 1344.1268                & 1503.2428   \\ \hline
+Run 4   & Not ran    & 9809.8023  & 19649.3469 & 1900.6768                & 1210.4677   \\ \hline
+Run 5   & Not ran    & 9281.1043  & 16201.7628 & 1667.8486                & 1186.0986   \\ \hline
+Run 6   & Not ran    & 9696.8252  & 16148.2112 & 1846.7209                & 1400.6217   \\ \hline
+Run 7   & Not ran    & 8524.4934  & 15752.8086 & 1712.4614                & 1587.2042   \\ \hline
+Run 8   & Not ran    & 7509.5591  & 16159.5268 & 1108.4135                & 1408.5632   \\ \hline
+Run 9   & Not ran    & 7918.5130  & 14293.4127 & 1910.1934                & 1250.8090   \\ \hline
+Run 10  & Not ran    & 7971.9010  & 13900.6599 & 1224.7428                & 1342.3943   \\ \hline
+        &            &            &            &                          &             \\ \hline
+Average & 84474.616  & 8990.542   & 16822.466  & 1590.918                 & 1370.814    \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the PBM436 VLSI TSP.}
+\label{tab:experiment_pbm436_run_times}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{1.4cm}|p{2cm}|p{2cm}|p{2cm}|p{3cm}|p{2cm}|}
+\hline
+               & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endfirsthead
+%
+\multicolumn{6}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ACO       & ACO-DBSCAN & ACO-OPTICS & ACO-AFFINITY-PROPAGATION & ACO-K-MEANS \\ \hline
+\endhead
+%
+Run 1          & 1928.7681 & 1849.6696  & 1909.0142  & 1865.1475                & 1878.9968   \\ \hline
+Run 2          & Not ran   & 1863.5609  & 1969.5305  & 1932.5224                & 1852.8806   \\ \hline
+Run 3          & Not ran   & 1906.1683  & 1987.0671  & 1936.3281                & 1901.2036   \\ \hline
+Run 4          & Not ran   & 1900.8163  & 1982.9071  & 1917.7954                & 1928.4163   \\ \hline
+Run 5          & Not ran   & 1859.2629  & 1912.7370  & 1920.1620                & 1880.6782   \\ \hline
+Run 6          & Not ran   & 1847.6075  & 1946.4215  & 1922.3184                & 1858.3440   \\ \hline
+Run 7          & Not ran   & 1849.5194  & 1938.9767  & 1921.9462                & 1887.0612   \\ \hline
+Run 8          & Not ran   & 1860.8935  & 1963.8095  & 1913.0916                & 1842.0867   \\ \hline
+Run 9          & Not ran   & 1807.6917  & 1902.8319  & 1908.8930                & 1916.4521   \\ \hline
+Run 10         & Not ran   & 1881.2964  & 1969.7270  & 1961.1387                & 1893.8261   \\ \hline
+               &           &            &            &                          &             \\ \hline
+Average        & 1928.768  & 1862.649   & 1948.302   & 1919.934                 & 1883.995    \\ \hline
+Min            & 1928.768  & 1807.692   & 1902.832   & 1865.148                 & 1842.087    \\ \hline
+Max            & 1928.768  & 1906.168   & 1987.067   & 1961.139                 & 1928.416    \\ \hline
+Lower Quartile & 1928.768  & 1849.557   & 1919.297   & 1914.268                 & 1863.507    \\ \hline
+Upper Quartile & 1928.768  & 1876.863   & 1969.678   & 1929.971                 & 1899.359    \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the PBM436 VLSI TSP.}
+\label{tab:experiment_pbm436_distances}\\
+\end{longtable}
+
+
+
+\section{Results for the XQF131 VLSI TSP Problem with 2-OPT}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 396.9647         & 112.2503                       & 91.8516           \\ \hline
+Run 2   & 368.8254         & 113.5303                       & 86.4098           \\ \hline
+Run 3   & 406.8031         & 92.3776                        & 93.5048           \\ \hline
+Run 4   & 365.7778         & 125.9105                       & 90.7333           \\ \hline
+Run 5   & 376.0073         & 126.2839                       & 69.1397           \\ \hline
+Run 6   & 382.4418         & 106.6977                       & 93.2267           \\ \hline
+Run 7   & 333.7321         & 137.6270                       & 98.5437           \\ \hline
+Run 8   & 330.8294         & 130.4258                       & 59.8525           \\ \hline
+Run 9   & 320.3680         & 112.2765                       & 111.3642          \\ \hline
+Run 10  & 399.1792         & 79.7582                        & 71.6987           \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 368.093          & 113.714                        & 86.633            \\ \hline
+\caption{This table shows the run times that were achieved when running these algorithms against the XQF131 VLSI TSP.}
+\label{tab:experiment_xqf131_run_time_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1               & 586.4156         & 614.5689                       & 603.2893          \\ \hline
+Run 2               & 593.2210         & 619.3415                       & 594.7706          \\ \hline
+Run 3               & 600.5031         & 630.3450                       & 592.5701          \\ \hline
+Run 4               & 598.8511         & 623.9721                       & 607.9683          \\ \hline
+Run 5               & 595.3633         & 598.0345                       & 615.6260          \\ \hline
+Run 6               & 608.6761         & 617.1946                       & 613.8820          \\ \hline
+Run 7               & 607.9521         & 613.7811                       & 610.7952          \\ \hline
+Run 8               & 607.8042         & 626.5694                       & 606.0002          \\ \hline
+Run 9               & 593.7831         & 622.8250                       & 585.1308          \\ \hline
+Run 10              & 586.9240         & 614.7539                       & 592.5478          \\ \hline
+                    &                  &                                &                   \\ \hline
+Average             & 597.949          & 618.139                        & 602.258           \\ \hline
+Min                 & 586.416          & 598.035                        & 585.131           \\ \hline
+Max                 & 608.676          & 630.345                        & 615.626           \\ \hline
+Lower Quartile & 593.362          & 614.615                        & 593.120           \\ \hline
+Upper Quartile      & 605.979          & 623.685                        & 610.088           \\ \hline
+\caption{This table shows the distances that were achieved when running these algorithms against the XQF131 VLSI TSP.}
+\label{tab:experiment_xqf131_distances_2_opt}\\
+\end{longtable}
+
+
+\section{Results for the XQG237 VLSI TSP Problem with 2-OPT}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 3292.2224        & 750.8707                       & 377.5772          \\ \hline
+Run 2   & 3066.2175        & 613.0740                       & 365.0939          \\ \hline
+Run 3   & 3125.5947        & 542.4271                       & 435.4377          \\ \hline
+Run 4   & 2850.6038        & 450.6868                       & 474.2500          \\ \hline
+Run 5   & 3627.1359        & 365.2025                       & 429.7145          \\ \hline
+Run 6   & 2826.5912        & 551.9695                       & 518.5251          \\ \hline
+Run 7   & 3271.9493        & 670.3704                       & 331.0851          \\ \hline
+Run 8   & 2929.6345        & 388.9378                       & 386.8905          \\ \hline
+Run 9   & 3052.3484        & 513.7656                       & 386.0826          \\ \hline
+Run 10  & 3004.9284        & 450.5813                       & 394.4547          \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 3104.723         & 529.789                        & 411.629           \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the XQG237 VLSI TSP.}
+\label{tab:experiment_xqg237_run_times_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1               & 1107.0320        & 1116.8054                      & 1120.6605         \\ \hline
+Run 2               & 1092.3029        & 1150.1150                      & 1123.8944         \\ \hline
+Run 3               & 1087.3286        & 1149.2156                      & 1149.4973         \\ \hline
+Run 4               & 1100.1604        & 1141.8980                      & 1130.1806         \\ \hline
+Run 5               & 1104.8745        & 1177.3419                      & 1096.9791         \\ \hline
+Run 6               & 1104.9632        & 1125.4873                      & 1115.3803         \\ \hline
+Run 7               & 1091.2564        & 1141.5555                      & 1104.9499         \\ \hline
+Run 8               & 1091.3012        & 1154.8272                      & 1106.8198         \\ \hline
+Run 9               & 1144.0331        & 1159.4643                      & 1119.9127         \\ \hline
+Run 10              & 1133.8555        & 1134.3270                      & 1160.3004         \\ \hline
+                    &                  &                                &                   \\ \hline
+Average             & 1105.711         & 1145.104                       & 1118.697          \\ \hline
+Min                 & 1087.329         & 1116.805                       & 1096.979          \\ \hline
+Max                 & 1144.033         & 1177.342                       & 1160.300          \\ \hline
+Lower Quartile & 1091.552         & 1136.134                       & 1108.960          \\ \hline
+Upper Quartile      & 1106.515         & 1153.649                       & 1128.609          \\ \hline
+\caption{This table shows the distances achieved when running these algorithms against the XQG237 VLSI TSP.}
+\label{tab:experiment_xqg237_distances_2_opt}\\
+\end{longtable}
+
+
+
+\section{Results for the PBM436 VLSI TSP Problem with 2-OPT}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+        & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1   & 20052.3560       & 2900.9722                      & 3177.7681         \\ \hline
+Run 2   & 20256.5388       & 2471.5824                      & 2896.7638         \\ \hline
+Run 3   & 19088.0378       & 3857.9745                      & 2682.3826         \\ \hline
+Run 4   & 14320.8105       & 3278.4768                      & 2051.8542         \\ \hline
+Run 5   & 16789.9102       & 3581.4735                      & 4022.7360         \\ \hline
+Run 6   & 17406.9866       & 2750.6130                      & 3416.5990         \\ \hline
+Run 7   & 16830.7888       & 2359.7762                      & 2930.4427         \\ \hline
+Run 8   & 15562.7521       & 2497.8346                      & 2853.6013         \\ \hline
+Run 9   & 15040.8442       & 2467.3043                      & 3477.3184         \\ \hline
+Run 10  & 16834.7642       & 2111.6140                      & 2911.6341         \\ \hline
+        &                  &                                &                   \\ \hline
+Average & 17261.003        & 2827.762                       & 3042.110          \\ \hline
+\caption{This table shows the run times achieved when running these algorithms against the PBM436 VLSI TSP.}
+\label{tab:experiment_pbm436_run_time_2_opt}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+                    & ACO-OPTICS-2-OPT & ACO-AFFINITY-PROPAGATION-2-OPT & ACO-K-MEANS-2-OPT \\ \hline
+\endhead
+%
+Run 1               & 1603.6302        & 1685.1013                      & 1652.1073         \\ \hline
+Run 2               & 1598.3658        & 1645.9618                      & 1631.0955         \\ \hline
+Run 3               & 1580.5452        & 1636.6107                      & 1630.8680         \\ \hline
+Run 4               & 1553.7771        & 1583.1095                      & 1642.2828         \\ \hline
+Run 5               & 1621.6495        & 1660.5312                      & 1613.4688         \\ \hline
+Run 6               & 1618.9375        & 1632.1002                      & 1602.6988         \\ \hline
+Run 7               & 1590.2720        & 1646.9868                      & 1637.6662         \\ \hline
+Run 8               & 1596.2617        & 1652.3499                      & 1608.9703         \\ \hline
+Run 9               & 1583.0324        & 1646.0895                      & 1634.6295         \\ \hline
+Run 10              & 1582.9820        & 1656.6762                      & 1620.3619         \\ \hline
+                    &                  &                                &                   \\ \hline
+Average             & 1594.052         & 1644.552                       & 1627.415          \\ \hline
+Min                 & 1553.777         & 1583.110                       & 1602.699          \\ \hline
+Max                 & 1621.649         & 1685.101                       & 1652.107          \\ \hline
+Lower Quartile & 1582.995         & 1638.948                       & 1615.192          \\ \hline
+Upper Quartile      & 1602.314         & 1655.595                       & 1636.907          \\ \hline
+\caption{This table shows the distances achieved when running these algorithms against the PBM436 VLSI TSP.}
+\label{tab:experiment_pbm436_distances_2_opt}\\
+\end{longtable}
+
+
+
+\section{Results for Varying the ACO Alpha Value}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & alpha 0.5 & alpha 1  & alpha 1.5 \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & alpha 0.5 & alpha 1  & alpha 1.5 \\ \hline
+\endhead
+%
+Run 1          & 144.9114  & 144.9856 & 221.6740  \\ \hline
+Run 2          & 151.8631  & 172.2227 & 217.9942  \\ \hline
+Run 3          & 147.8541  & 130.8110 & 128.2049  \\ \hline
+Run 4          & 145.9153  & 134.0408 & 207.6050  \\ \hline
+Run 5          & 148.8555  & 214.2991 & 176.3275  \\ \hline
+Run 6          & 149.1455  & 182.6765 & 128.8529  \\ \hline
+Run 7          & 147.3119  & 146.1649 & 137.1819  \\ \hline
+Run 8          & 145.2655  & 154.3833 & 222.2854  \\ \hline
+Run 9          & 154.7216  & 224.1060 & 129.3853  \\ \hline
+Run 10         & 142.3196  & 150.5188 & 236.3788  \\ \hline
+               &           &          &           \\ \hline
+Average        & 147.8163  & 165.4209 & 180.5890  \\ \hline
+Min            & 142.3196  & 130.8110 & 128.2049  \\ \hline
+Max            & 154.7216  & 224.1060 & 236.3788  \\ \hline
+Lower Quartile & 145.4279  & 145.2804 & 131.3344  \\ \hline
+Upper Quartile & 149.0730  & 180.0631 & 220.7540  \\ \hline
+\caption{This table shows the effects on run time of varying the alpha ACO value.}
+\label{tab:experiment_alpha_aco_run_time}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & alpha 0.5  & alpha 1    & alpha 1.5  \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & alpha 0.5  & alpha 1    & alpha 1.5  \\ \hline
+\endhead
+%
+Run 1          & 43787.9055 & 48061.5597 & 45115.9751 \\ \hline
+Run 2          & 45710.4980 & 45584.1411 & 46617.8737 \\ \hline
+Run 3          & 46446.5896 & 44717.2019 & 46163.4729 \\ \hline
+Run 4          & 46381.8590 & 45878.0255 & 45879.4534 \\ \hline
+Run 5          & 45313.4562 & 45105.9546 & 45618.4144 \\ \hline
+Run 6          & 48061.5433 & 45173.8402 & 46178.2434 \\ \hline
+Run 7          & 44393.9807 & 46442.4563 & 46260.4481 \\ \hline
+Run 8          & 46160.9336 & 44873.2572 & 46767.2037 \\ \hline
+Run 9          & 44995.5444 & 44651.8669 & 45633.1496 \\ \hline
+Run 10         & 44841.5596 & 46848.7596 & 46993.5487 \\ \hline
+               &            &            &            \\ \hline
+Average        & 45609.3870 & 45733.7063 & 46122.7783 \\ \hline
+Min            & 43787.9055 & 44651.8669 & 45115.9751 \\ \hline
+Max            & 48061.5433 & 48061.5597 & 46993.5487 \\ \hline
+Lower Quartile & 44880.0558 & 44931.4316 & 45694.7255 \\ \hline
+Upper Quartile & 46326.6277 & 46301.3486 & 46528.5173 \\ \hline
+\caption{This table shows the effects on tour distances of varying the ACO alpha value.}
+\label{tab:experiment_alpha_aco_distances}\\
+\end{longtable}
+
+
+
+\section{Results for Varying the ACO Ant Count Value}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & ants node/1.5 & ants = node & ants = nodex2 \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ants node/1.5 & ants = node & ants = nodex2 \\ \hline
+\endhead
+%
+Run 1          & 144.9856      & 307.2184    & 433.5692      \\ \hline
+Run 2          & 172.2227      & 192.3558    & 413.4145      \\ \hline
+Run 3          & 130.8110      & 205.9551    & 435.5705      \\ \hline
+Run 4          & 134.0408      & 199.6713    & 446.2227      \\ \hline
+Run 5          & 214.2991      & 196.4052    & 437.0387      \\ \hline
+Run 6          & 182.6765      & 213.3420    & 411.2447      \\ \hline
+Run 7          & 146.1649      & 189.8515    & 419.2012      \\ \hline
+Run 8          & 154.3833      & 199.9982    & 431.6205      \\ \hline
+Run 9          & 224.1060      & 189.9751    & 416.4393      \\ \hline
+Run 10         & 150.5188      & 337.1007    & 467.2178      \\ \hline
+               &               &             &               \\ \hline
+Average        & 165.4209      & 223.1873    & 431.1539      \\ \hline
+Min            & 130.8110      & 189.8515    & 411.2447      \\ \hline
+Max            & 224.1060      & 337.1007    & 467.2178      \\ \hline
+Lower Quartile & 145.2804      & 193.3682    & 417.1298      \\ \hline
+Upper Quartile & 180.0631      & 211.4953    & 436.6717      \\ \hline
+\caption{This table shows the effects on run time of varying the number of ants.}
+\label{tab:experiment_ant_count_aco_run_time}\\
+\end{longtable}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & ants node/1.5 & ants = node & ants = nodex2 \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & ants node/1.5 & ants = node & ants = nodex2 \\ \hline
+\endhead
+%
+Run 1          & 48061.5597    & 46184.6164  & 45498.5241    \\ \hline
+Run 2          & 45584.1411    & 46172.0807  & 45382.4403    \\ \hline
+Run 3          & 44717.2019    & 44845.4379  & 45664.3896    \\ \hline
+Run 4          & 45878.0255    & 44998.3591  & 46275.6645    \\ \hline
+Run 5          & 45105.9546    & 44346.1776  & 45607.6974    \\ \hline
+Run 6          & 45173.8402    & 45458.0784  & 46439.7571    \\ \hline
+Run 7          & 46442.4563    & 44119.5935  & 43905.5972    \\ \hline
+Run 8          & 44873.2572    & 44831.9959  & 46389.8819    \\ \hline
+Run 9          & 44651.8669    & 46911.9576  & 45238.2608    \\ \hline
+Run 10         & 46848.7596    & 46112.6310  & 44012.6947    \\ \hline
+               &               &             &               \\ \hline
+Average        & 45733.7063    & 45398.0928  & 45441.4907    \\ \hline
+Min            & 44651.8669    & 44119.5935  & 43905.5972    \\ \hline
+Max            & 48061.5597    & 46911.9576  & 46439.7571    \\ \hline
+Lower Quartile & 44931.4316    & 44835.3564  & 45274.3056    \\ \hline
+Upper Quartile & 46301.3486    & 46157.2183  & 46122.8458    \\ \hline
+\caption{This table shows the effects on distance of varying the number of ants}
+\label{tab:experiment_ant_count_aco_distances}\\
+\end{longtable}
+
+\section{Results for Varying the Beta Value}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & beta 5   & beta 10  & beta 15  \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & beta 5   & beta 10  & beta 15  \\ \hline
+\endhead
+%
+Run 1          & 226.2262 & 144.9856 & 132.0314 \\ \hline
+Run 2          & 131.1307 & 172.2227 & 220.8498 \\ \hline
+Run 3          & 127.0288 & 130.8110 & 167.8397 \\ \hline
+Run 4          & 210.3962 & 134.0408 & 216.4223 \\ \hline
+Run 5          & 159.4666 & 214.2991 & 162.3767 \\ \hline
+Run 6          & 127.0415 & 182.6765 & 139.837  \\ \hline
+Run 7          & 220.1156 & 146.1649 & 129.7729 \\ \hline
+Run 8          & 218.7772 & 154.3833 & 129.7729 \\ \hline
+Run 9          & 130.8362 & 224.1060 & 125.0807 \\ \hline
+Run 10         & 228.7412 & 150.5188 & 124.6496 \\ \hline
+               &          &          &          \\ \hline
+Average        & 177.9760 & 165.4209 & 154.8633 \\ \hline
+Min            & 127.0288 & 130.8110 & 124.6496 \\ \hline
+Max            & 228.7412 & 224.1060 & 220.8498 \\ \hline
+Lower Quartile & 130.9098 & 145.2804 & 129.7729 \\ \hline
+Upper Quartile & 219.7810 & 180.0631 & 166.4740 \\ \hline
+\caption{This table shows the effects on run time of varying the beta ACO parameter.}
+\label{tab:experiment_beta_aco_run_time}\\
+\end{longtable}
+
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & beta 5     & beta 10    & beta 15    \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & beta 5     & beta 10    & beta 15    \\ \hline
+\endhead
+%
+Run 1          & 44478.1137 & 48061.5597 & 46896.7353 \\ \hline
+Run 2          & 45533.9233 & 45584.1411 & 47127.1160 \\ \hline
+Run 3          & 44931.7864 & 44717.2019 & 46580.9953 \\ \hline
+Run 4          & 47183.5082 & 45878.0255 & 44737.5462 \\ \hline
+Run 5          & 44996.5072 & 45105.9546 & 46553.5277 \\ \hline
+Run 6          & 44914.8033 & 45173.8402 & 45724.4698 \\ \hline
+Run 7          & 45238.8861 & 46442.4563 & 44925.0186 \\ \hline
+Run 8          & 45913.8641 & 44873.2572 & 44925.0185 \\ \hline
+Run 9          & 45805.1288 & 44651.8669 & 45845.8906 \\ \hline
+Run 10         & 46061.9374 & 46848.7596 & 44567.8581 \\ \hline
+               &            &            &            \\ \hline
+Average        & 45505.8459 & 45733.7063 & 45788.4176 \\ \hline
+Min            & 44478.1137 & 44651.8669 & 44567.8581 \\ \hline
+Max            & 47183.5082 & 48061.5597 & 47127.1160 \\ \hline
+Lower Quartile & 44947.9666 & 44931.4316 & 44925.0185 \\ \hline
+Upper Quartile & 45886.6803 & 46301.3486 & 46574.1284 \\ \hline
+\caption{This table shows the effects on distance of varying the beta ACO parameter.}
+\label{tab:experiment_beta_aco_distance}\\
+\end{longtable}
+
+
+
+\section{Results for Varying the Q Value}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & q 500    & a1000    & q1500    \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & q 500    & a1000    & q1500    \\ \hline
+\endhead
+%
+Run 1          & 203.9135 & 144.9856 & 153.7893 \\ \hline
+Run 2          & 217.9646 & 172.2227 & 220.3831 \\ \hline
+Run 3          & 123.8956 & 130.8110 & 124.8896 \\ \hline
+Run 4          & 230.8474 & 134.0408 & 221.6692 \\ \hline
+Run 5          & 221.9327 & 214.2991 & 213.8150 \\ \hline
+Run 6          & 126.4397 & 182.6765 & 213.3422 \\ \hline
+Run 7          & 142.1901 & 146.1649 & 213.6001 \\ \hline
+Run 8          & 237.4647 & 154.3833 & 199.8352 \\ \hline
+Run 9          & 126.7009 & 224.1060 & 176.3473 \\ \hline
+Run 10         & 210.3946 & 150.5188 & 164.5435 \\ \hline
+               &          &          &          \\ \hline
+Average        & 184.1744 & 165.4209 & 190.2214 \\ \hline
+Min            & 123.8956 & 130.8110 & 124.8896 \\ \hline
+Max            & 237.4647 & 224.1060 & 221.6692 \\ \hline
+Lower Quartile & 130.5732 & 145.2804 & 167.4945 \\ \hline
+Upper Quartile & 220.9407 & 180.0631 & 213.7613 \\ \hline
+\caption{This table shows the effects on run time of varying the Q ACO parameter}
+\label{tab:experiment_q_aco_run_time}\\
+\end{longtable}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & q 500      & q1000      & q1500      \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & q 500      & q1000      & q1500      \\ \hline
+\endhead
+%
+Run 1          & 45618.2540 & 48061.5597 & 44289.5022 \\ \hline
+Run 2          & 44743.8010 & 45584.1411 & 44895.8029 \\ \hline
+Run 3          & 46407.8930 & 44717.2019 & 45208.1461 \\ \hline
+Run 4          & 46198.1572 & 45878.0255 & 47071.9564 \\ \hline
+Run 5          & 45542.4943 & 45105.9546 & 45270.4258 \\ \hline
+Run 6          & 45485.3808 & 45173.8402 & 46788.3040 \\ \hline
+Run 7          & 44336.3567 & 46442.4563 & 46259.1906 \\ \hline
+Run 8          & 44371.3449 & 44873.2572 & 44507.2580 \\ \hline
+Run 9          & 45226.5447 & 44651.8669 & 47182.4448 \\ \hline
+Run 10         & 47053.5037 & 46848.7596 & 45352.0514 \\ \hline
+               &            &            &            \\ \hline
+Average        & 45498.3730 & 45733.7063 & 45682.5082 \\ \hline
+Min            & 44336.3567 & 44651.8669 & 44289.5022 \\ \hline
+Max            & 47053.5037 & 48061.5597 & 47182.4448 \\ \hline
+Lower Quartile & 44864.4869 & 44931.4316 & 44973.8887 \\ \hline
+Upper Quartile & 46053.1814 & 46301.3486 & 46656.0256 \\ \hline
+\caption{This table shows the effects on distance of varying the Q ACO parameter.}
+\label{tab:experiment_q_distance}\\
+\end{longtable}
+
+
+
+\section{Results for Varying the Rho Value}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & rho 0.2  & rho 0.4  & rho 1    \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & rho 0.2  & rho 0.4  & rho 1    \\ \hline
+\endhead
+%
+Run 1          & 121.0505 & 144.9856 & 239.5919 \\ \hline
+Run 2          & 170.9169 & 172.2227 & 220.6756 \\ \hline
+Run 3          & 218.1002 & 130.8110 & 132.0742 \\ \hline
+Run 4          & 211.2390 & 134.0408 & 220.8392 \\ \hline
+Run 5          & 126.0996 & 214.2991 & 176.0058 \\ \hline
+Run 6          & 127.1623 & 182.6765 & 227.3527 \\ \hline
+Run 7          & 135.1087 & 146.1649 & 238.5447 \\ \hline
+Run 8          & 220.6944 & 154.3833 & 126.4895 \\ \hline
+Run 9          & 121.3275 & 224.1060 & 233.8193 \\ \hline
+Run 10         & 137.1636 & 150.5188 & 148.3462 \\ \hline
+               &          &          &          \\ \hline
+Average        & 158.8863 & 165.4209 & 196.3739 \\ \hline
+Min            & 121.0505 & 130.8110 & 126.4895 \\ \hline
+Max            & 220.6944 & 224.1060 & 239.5919 \\ \hline
+Lower Quartile & 126.3653 & 145.2804 & 155.2611 \\ \hline
+Upper Quartile & 201.1585 & 180.0631 & 232.2026 \\ \hline
+\caption{This table shows the effect on run time of varying the rho ACO parameter.}
+\label{tab:experiment_rho_aco_run_time}\\
+\end{longtable}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{longtable}
+% Note: It may be necessary to compile the document several times to get a multi-page table to line up properly
+\begin{longtable}[c]{|p{2cm}|p{3cm}|p{4cm}|p{3cm}|}
+\hline
+               & rho 0.2    & rho 0.4    & rho 1      \\ \hline
+\endfirsthead
+%
+\multicolumn{4}{c}%
+{{\bfseries Table \thetable\ continued from previous page}} \\
+\hline
+               & rho 0.2    & rho 0.4    & rho 1      \\ \hline
+\endhead
+%
+Run 1          & 44765.8185 & 48061.5597 & 47536.1526 \\ \hline
+Run 2          & 46022.1993 & 45584.1411 & 45877.3188 \\ \hline
+Run 3          & 44437.2223 & 44717.2019 & 46857.4620 \\ \hline
+Run 4          & 45086.8590 & 45878.0255 & 46182.8873 \\ \hline
+Run 5          & 44620.4026 & 45105.9546 & 45153.4402 \\ \hline
+Run 6          & 46269.0688 & 45173.8402 & 44434.6809 \\ \hline
+Run 7          & 44420.0843 & 46442.4563 & 45938.5295 \\ \hline
+Run 8          & 47129.7449 & 44873.2572 & 45069.9624 \\ \hline
+Run 9          & 45910.2599 & 44651.8669 & 46488.8646 \\ \hline
+Run 10         & 47754.0702 & 46848.7596 & 45747.2789 \\ \hline
+               &            &            &            \\ \hline
+Average        & 45641.5730 & 45733.7063 & 45928.6577 \\ \hline
+Min            & 44420.0843 & 44651.8669 & 44434.6809 \\ \hline
+Max            & 47754.0702 & 48061.5597 & 47536.1526 \\ \hline
+Lower Quartile & 44656.7566 & 44931.4316 & 45301.8998 \\ \hline
+Upper Quartile & 46207.3514 & 46301.3486 & 46412.3703 \\ \hline
+\caption{This table shows the effects on distance of varying the rho ACO parameter.}
+\label{tab:experiment_rho_aco_distance}\\
+\end{longtable}
